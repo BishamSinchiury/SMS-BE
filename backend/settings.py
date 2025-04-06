@@ -38,7 +38,10 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
-    'Inventory'
+    'rest_framework',
+    'inventory',
+    'core',
+    'users'
 ]
 
 MIDDLEWARE = [
@@ -103,8 +106,15 @@ AUTH_PASSWORD_VALIDATORS = [
         'NAME': 'django.contrib.auth.password_validation.NumericPasswordValidator',
     },
 ]
+AUTH_USER_MODEL = "users.User"
 
-
+EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
+EMAIL_HOST = config('EMAIL_HOST')  # Reads from .env
+EMAIL_PORT = config('EMAIL_PORT', cast=int)  # Ensure this is an integer
+EMAIL_USE_TLS = config('EMAIL_USE_TLS', cast=bool)  # Ensure this is a boolean
+EMAIL_HOST_USER = config('EMAIL_HOST_USER')
+EMAIL_HOST_PASSWORD = config('EMAIL_HOST_PASSWORD')
+DEFAULT_FROM_EMAIL = config('DEFAULT_FROM_EMAIL')
 # Internationalization
 # https://docs.djangoproject.com/en/5.2/topics/i18n/
 
