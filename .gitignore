@@ -1,0 +1,63 @@
+# Python/Django General
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+env/
+venv/
+ENV/
+env.bak/
+venv.bak/
+
+# Virtual Environment
+venv/
+*.venv
+
+# Environment Variables
+.env
+*.env
+
+# Django Specific
+*.log
+*.pot
+*.pyc
+*.pyo
+*.pyd
+db.sqlite3
+media/
+staticfiles/
+
+# Development Tools
+.DS_Store  # macOS
+Thumbs.db  # Windows
+*.swp      # Vim swap files
+*.swo
+.vscode/   # VS Code settings
+.idea/     # PyCharm/IDEA settings
+*.sublime-workspace  # Sublime Text
+
+# Testing/Coverage
+htmlcov/
+.coverage
+.coverage.*
+.cache
+nosetests.xml
+coverage.xml
+*.cover
+*.py,cover
+pytest_cache/
+
+# Build/Deployment
+dist/
+build/
+*.egg
+*.egg-info/
+*.manifest
+*.spec
+
+# Miscellaneous
+*.bak
+*.backup
+*.tmp
+*.temp
