@@ -53,6 +53,9 @@ class ItemsLoan(models.Model):
         max_length=50, 
         blank=True, 
         null=True
+        )
+    borrow_qty = models.IntegerField(
+        default=1
         )  
     loan_date = models.DateField(
         default=timezone.now
