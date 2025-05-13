@@ -33,6 +33,7 @@ class UserManager(BaseUserManager):
 # Custom User Model
 class User(AbstractBaseUser, PermissionsMixin):
     first_name = models.CharField(max_length=50)
+    middle_name = models.CharField(max_length=50, blank=True)
     last_name = models.CharField(max_length=50)
     email = models.EmailField(unique=True)  # Email as the unique identifier
     password = models.CharField(max_length=128)  # Stored as hashed value
